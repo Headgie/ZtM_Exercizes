@@ -8,7 +8,7 @@ body {
     background-size: cover;
 }
 
-h2 + p:hover {
+h2 + p {
     color: #b1433d;
     text-align: center;
     border: 5px solid rgba(255, 176, 171, 0.5);
@@ -16,7 +16,11 @@ h2 + p:hover {
 }
 
 p {
-    color: purple;
+    line-height: 50px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 180%;
+    font-family: 'Poiret One', cursive;
 }
 
 li {
