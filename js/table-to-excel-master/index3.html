@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./dgrid.css" /> -->
+    <!-- <link rel="stylesheet" href="./fgrid.css" /> -->
+    <style>
+      .jsontotable table,
+      .jsontotable th,
+      .jsontotable td {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid black;
+      }
+      .jsontotable td {
+        vertical-align: middle;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jsontotable" id="simple-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Изделие</th>
+            <th>№ СЛИ</th>
+            <th>Вход</th>
+            <th>Выход</th>
+            <th>% выход годных по партии</th>
+            <th>Средний % выхода годных по изделию</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">1890ВГ11Т</td>
+            <td>10893</td>
+            <td>237</td>
+            <td>216</td>
+            <td>91</td>
+            <td rowspan="3">88</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВГ11Т</td>
+            <td>10896</td>
+            <td>707</td>
+            <td>620</td>
+            <td>87</td>
+            <td style="display: none;">88</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВГ11Т</td>
+            <td>11535</td>
+            <td>240</td>
+            <td>208</td>
+            <td>86</td>
+            <td style="display: none;">88</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1890ВГ14Т</td>
+            <td>10605</td>
+            <td>120</td>
+            <td>108</td>
+            <td>90</td>
+            <td rowspan="1">90</td>
+          </tr>
+          <tr>
+            <td rowspan="3">1890ВГ5Т</td>
+            <td>10101</td>
+            <td>216</td>
+            <td>168</td>
+            <td>77</td>
+            <td rowspan="3">78</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВГ5Т</td>
+            <td>10128</td>
+            <td>432</td>
+            <td>330</td>
+            <td>76</td>
+            <td style="display: none;">78</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВГ5Т</td>
+            <td>10619</td>
+            <td>240</td>
+            <td>195</td>
+            <td>81</td>
+            <td style="display: none;">78</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1890ВГ8Т</td>
+            <td>11263</td>
+            <td>720</td>
+            <td>611</td>
+            <td>84</td>
+            <td rowspan="1">84</td>
+          </tr>
+          <tr>
+            <td rowspan="2">1890ВМ108</td>
+            <td>11588</td>
+            <td>135</td>
+            <td>76</td>
+            <td>56</td>
+            <td rowspan="2">56</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ108</td>
+            <td>11589</td>
+            <td>132</td>
+            <td>74</td>
+            <td>56</td>
+            <td style="display: none;">56</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1890ВМ118</td>
+            <td>11170</td>
+            <td>200</td>
+            <td>71</td>
+            <td>35</td>
+            <td rowspan="1">35</td>
+          </tr>
+          <tr>
+            <td rowspan="4">1890ВМ2Т</td>
+            <td>7332</td>
+            <td>140</td>
+            <td>124</td>
+            <td>88</td>
+            <td rowspan="4">92</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ2Т</td>
+            <td>10780</td>
+            <td>354</td>
+            <td>339</td>
+            <td>95</td>
+            <td style="display: none;">92</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ2Т</td>
+            <td>10792</td>
+            <td>300</td>
+            <td>288</td>
+            <td>96</td>
+            <td style="display: none;">92</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ2Т</td>
+            <td>11271</td>
+            <td>341</td>
+            <td>316</td>
+            <td>92</td>
+            <td style="display: none;">92</td>
+          </tr>
+          <tr>
+            <td rowspan="2">1890ВМ5Ф</td>
+            <td>11784</td>
+            <td>78</td>
+            <td>51</td>
+            <td>65</td>
+            <td rowspan="2">72</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ5Ф</td>
+            <td>11812</td>
+            <td>79</td>
+            <td>63</td>
+            <td>79</td>
+            <td style="display: none;">72</td>
+          </tr>
+          <tr>
+            <td rowspan="4">1890ВМ8Я</td>
+            <td>9481</td>
+            <td>157</td>
+            <td>59</td>
+            <td>37</td>
+            <td rowspan="4">56</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ8Я</td>
+            <td>9483</td>
+            <td>188</td>
+            <td>76</td>
+            <td>40</td>
+            <td style="display: none;">56</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ8Я</td>
+            <td>11740</td>
+            <td>109</td>
+            <td>81</td>
+            <td>74</td>
+            <td style="display: none;">56</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1890ВМ8Я</td>
+            <td>11878</td>
+            <td>105</td>
+            <td>78</td>
+            <td>74</td>
+            <td style="display: none;">56</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1890ВЦ3Т</td>
+            <td>10594</td>
+            <td>716</td>
+            <td>635</td>
+            <td>88</td>
+            <td rowspan="1">88</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1890КП1Я</td>
+            <td>11684</td>
+            <td>210</td>
+            <td>178</td>
+            <td>84</td>
+            <td rowspan="1">84</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1890КХ018</td>
+            <td>11256</td>
+            <td>33</td>
+            <td>30</td>
+            <td>90</td>
+            <td rowspan="1">90</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1895ВА2Т</td>
+            <td>11208</td>
+            <td>400</td>
+            <td>372</td>
+            <td>93</td>
+            <td rowspan="1">93</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1899ВГ2Т</td>
+            <td>11361</td>
+            <td>300</td>
+            <td>292</td>
+            <td>97</td>
+            <td rowspan="1">97</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1907ВМ056</td>
+            <td>11105</td>
+            <td>127</td>
+            <td>116</td>
+            <td>91</td>
+            <td rowspan="1">91</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1907ВМ066</td>
+            <td>9314</td>
+            <td>60</td>
+            <td>60</td>
+            <td>100</td>
+            <td rowspan="1">100</td>
+          </tr>
+          <tr>
+            <td rowspan="1">1990АИ1Т</td>
+            <td>9349</td>
+            <td>107</td>
+            <td>102</td>
+            <td>95</td>
+            <td rowspan="1">95</td>
+          </tr>
+          <tr>
+            <td rowspan="3">1990ВГ8Т</td>
+            <td>8481</td>
+            <td>94</td>
+            <td>89</td>
+            <td>94</td>
+            <td rowspan="3">93</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1990ВГ8Т</td>
+            <td>10309</td>
+            <td>128</td>
+            <td>120</td>
+            <td>93</td>
+            <td style="display: none;">93</td>
+          </tr>
+          <tr>
+            <td style="display: none;">1990ВГ8Т</td>
+            <td>11641</td>
+            <td>101</td>
+            <td>93</td>
+            <td>92</td>
+            <td style="display: none;">93</td>
+          </tr>
+          <tr>
+            <td rowspan="1">5890ВМ1Т</td>
+            <td>11450</td>
+            <td>231</td>
+            <td>209</td>
+            <td>90</td>
+            <td rowspan="1">90</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button id="button-excel">Create Excel</button>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="./dist/tableToExcel.js"></script>
+    <script>
+      let button = document.querySelector("#button-excel");
+      button.addEventListener("click", e => {
+
+        $("td:hidden").remove();
+
+        $("th").each( function() {
+          $(this).attr('data-f-bold', 'true');
+        });
+
+        $("th, td").each( function() {
+          $(this).attr('data-a-h', 'center');
+          $(this).attr('data-a-v', 'middle');
+          $(this).attr('data-b-a-s', 'thin');
+          $(this).attr('data-a-wrap', 'true');          
+        });
+        $('#simple-table >table').each(function(){
+          $(this).attr('data-cols-width', '20,10,10,10,10,20'); 
+        }) ;
+        
+        
+        TableToExcel.convert($('#simple-table >table')[0]);
+      });
+    </script>
+  </body>
+</html>
