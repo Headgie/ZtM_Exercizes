@@ -1,6 +1,5 @@
 // using this array,
- var array = ["Banana", "Apples", "Oranges", "Blueberries"];
-
+var array = ["Banana", "Apples", "Oranges", "Blueberries"];
 
 // 1. Remove the Banana from the array.
 
@@ -23,13 +22,35 @@ array.splice(0, 1);
 
 array.reverse();
 
-console.log(array);
+//console.log(array);
 
 // you should have at the end:
 // ["Kiwi", "Oranges", "Blueberries"]
 
 // using this array,
- var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 // access "Oranges".
 
-console.log(array2[1][1][0]);
+//console.log(array2[1][1][0]);
+
+var user = {
+  name: "John",
+  age: 34,
+  hobby: "Soccer",
+  isMarried: false,
+  spells: ["fireball", "lightning", "town portal"],
+  shout: function() {
+      console.log('AAAAAAAAAAAA!');
+  }
+};
+
+var list = [
+  {
+    username: "andy",
+    password: "123"
+  },
+  {
+    username: "jess",
+    password: "312"
+  }
+];

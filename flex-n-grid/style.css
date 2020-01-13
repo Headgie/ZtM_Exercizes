@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 16px Sans-Serif;
+}
+h1 {
+  margin: 0 0 20px 0;
+}
+p {
+  margin: 0 0 20px 0;
+}
+footer {
+  background: #42a5f5;
+  color: white;
+}
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin: 0px;
+}
+
+.report-container {
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    grid-column: 2;
+    grid-row:6;
+    overflow: auto;
+    
+}
+
+.inner {
+    width: 100vw;
+    height: 10vh;
+}
+
+.list-inner{
+    width: 10vw;
+    height: 10vh;
+}
+.report-container table {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+   max-height: 100%; 
+   width: 100%; */
+  /*height: 3000px; */
+}
+.report-container table,
+.report-container th,
+.report-container td,
+.list table,
+.list th,
+.list td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.report-container td,
+.list td {
+  vertical-align: middle;
+  text-align: center;
+   min-width: 5em; 
+  height: 3em;
+}
+
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 2rem 5px 5px 5px;
+  background: #97bfdf81;
+}
+.footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+.container {
+  /* border: 1px solid gray; */
+  /* display: flex; */
+  font-size: 16px;
+  display: grid;
+  height: 100%;
+  background: #7da88681;
+
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows:
+    3em
+    3em
+    minmax(min-content, max-content)
+    3em
+    minmax(min-content, max-content)
+    1fr
+    minmax(min-content, max-content);
+}
+.page-caption {
+  background: #6083cf81;
+  grid-column: 1/3;
+  grid-row: 1;
+
+}
+
+.list {
+  background: #cf846081;
+  /* margin: 5px; */
+  grid-column: 1/2;
+  grid-row: 2/8;
+  overflow: auto;
+}
+.caption {
+  padding: 0px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.params {
+  background: #cfb16081;
+  padding: 0px 5px 5px 5px;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.buttons {
+  padding: 0px 5px 5px 5px;
+  grid-column: 2;
+  grid-row: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.headnote {
+  background: #cfb16081;
+  padding: 0px 5px 5px 5px;
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.footnote {
+  background: #cfb16081;
+  padding: 0px 5px 5px 5px;
+  grid-column: 2;
+  grid-row: 7;
+}
