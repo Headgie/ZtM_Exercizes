@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 5px;
+}
+
+div.textOuts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.htmlOut {
+  height: 305px;
+  width: 577px; 
+  border: 1px solid #a9a9a9;
+  margin-left: 5px; 
+
+ 
+
+ /* max-height: 150px;
+  max-width: 50%; */
+  display: flex; /*added*/
+  flex-direction: column; /*added*/
+}
+
+
+div.htmlContents {
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-y: auto;
+  overflow-x: auto;
+  flex: 1; /* added */
+}
