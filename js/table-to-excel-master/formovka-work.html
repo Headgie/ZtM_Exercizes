@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+       table,
+       th,
+       td {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid black;
+      }
+       td {
+        vertical-align: middle;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <div class="jsontotable" id="simple-table"  "></div>
+    
+    <button id="button-excel">Create Excel</button>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="./dist/tableToExcel.js"></script>
+    <script type="text/javascript" src="./dist/jquery.jsontotable.min.js"></script>
+		<script type="text/javascript" src="./dist/jquery.rowspanizer.min.js"></script>
+    <script>
+      var result = '';
+           var queryResultJson = JSON.parse(result);
+
+      var first = JSON.parse(JSON.stringify(queryResultJson[0]) );
+
+      Object.getOwnPropertyNames(first).forEach(e => {
+        first[e]=e;
+      });
+      queryResultJson.unshift(first);
+     
+      
+      var params = {
+        type: "EXCEL",
+        rowspanizer: {
+          columns: [0, 1,2,3,4,5,6,7]
+        }
+      };
+      let button = document.querySelector("#button-excel");
+      button.addEventListener("click", e => {
+        exportToExcel("ЭИ и ФК.xlsx", params) ;
+      });
+
+
+      function exportToExcel(fileName, params) {
+        if (queryResultJson === null) return;
+        $.jsontotable(queryResultJson, { id: "#simple-table", header: true });
+
+        $("#simple-table td[style*='display: none;']").remove();
+
+        $("#simple-table th").each(function() {
+          $(this).attr("data-f-bold", "true");
+        });
+
+        $("#simple-table th, #simple-table td").each(function() {
+          $(this).attr("data-f-name", "Times New Roman");
+          $(this).attr("data-f-sz", "10");
+          $(this).attr("data-a-h", "center");
+          $(this).attr("data-a-v", "middle");
+          $(this).attr("data-b-a-s", "thin");
+          $(this).attr("data-a-wrap", "true");
+        });
+        $("#simple-table >table").each(function() {
+          //$(this).attr('data-cols-width', '20,10,10,10,10,20');
+          $(this).rowspanizer({ columns: params.rowspanizer.columns });
+        });
+        $("#simple-table td:contains('#')").each(function() {
+          var textValue= this.textContent;
+          this.textContent=textValue.split("#")[1];
+        });
+
+        //$("#simple-table td:contains('#')").html("");
+
+        TableToExcel.convert($("#simple-table >table")[0], {
+          name: fileName,
+          sheet: {
+            name: "Sheet 1"
+          }
+        });
+
+
+       //$("#simple-table table").remove();
+      }
+    </script>
+  </body>
+</html>
