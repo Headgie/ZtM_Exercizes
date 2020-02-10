@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-weight: 600;
+  overflow: hidden;
+  min-width: 0;
+  width: max-content;
+}
+
+header {
+  background-color: whitesmoke;
+  flex: 0 0 auto;
+  padding: 1rem;
+}
+
+footer {
+  background-color: gray;
+  flex: 0 0 auto;
+  padding: 0.25rem;
+}
+
+content {
+  background-color: rgb(226, 223, 223);
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* overflow: hidden; */
+}
+
+nav {
+  background-color: white;
+  flex: 0 0 350px;
+  /* display: none; */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+/* table, */
+td,
+th {
+  border-bottom: 1px solid darkgrey;
+}
+th {
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  border-top: 1px solid darkgrey;
+}
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  background-color: white;
+  border-radius: 3px;
+  flex: 1 0;
+  height: calc(100vh - 140px);
+  display: grid;
+  margin: 1rem;
+  grid-template-rows: minmax(3rem, max-content) minmax(3rem, max-content) 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  /* min-height: 0;
+  min-width: 0;    */
+}
+
+.pageCaption {
+  padding: 0.5rem;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.filter {
+  border-top: 1px solid rgba(169, 169, 169, 0.384);
+  border-bottom: 1px solid rgba(169, 169, 169, 0.384);
+  grid-column: 1;
+  grid-row: 2;
+}
+.tableContainer {
+  /* border-top: 1px solid rgba(169, 169, 169, 0.384); */
+  grid-column: 1;
+  grid-row: 3;
+  /* overflow: auto;   */
+  /* min-width: 0;       */
+  max-width: auto;
+  /* height: calc(100vh - 150px); */
+}
+
+.inner {
+  overflow: auto;
+  height: calc(100vh - 250px);
+  /* background-color: rgba(30, 143, 255, 0.26); */
+  margin: 0px, 1rem;
+  border-top: 1px solid rgba(169, 169, 169, 0.384);
+  border-bottom: 1px solid rgba(169, 169, 169, 0.384);
+}
