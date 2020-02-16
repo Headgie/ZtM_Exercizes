@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="App.container.styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a
+      href="https://ru.reactjs.org/docs/add-react-to-a-website.html#run-jsx-preprocessor"
+      >to live compile run: npx babel --watch src --out-dir . --presets
+      react-app/prod</a
+    >
+    <div id="app"></div>
+    <!-- Загрузим React. -->
+    <!-- Примечание: для деплоя на продакшен замените окончание «development.js» на «production.min.js». -->
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>   -->
+
+    <script
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+
+    <!-- Загрузим наш React-компонент. -->
+    <script src="./App.container.js"></script>
+    <script src="./CustomButton.js"></script>
+  </body>
+</html>
