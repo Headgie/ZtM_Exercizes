@@ -16,7 +16,7 @@ class App extends React.Component {
       .then(users => this.setState({ users: users }));
   }
 
-  handleClick = (user) => {
+  handleClick = user => {
     alert(JSON.stringify(user));
   };
 
@@ -28,11 +28,13 @@ class App extends React.Component {
       return (
         <div id="users" className="toolbar toolbar150">
           {users.map((user, i) => {
-            return <CustomButton 
-              key={user.id} 
-              user={user}
-              handleClick={this.handleClick}>
-              </CustomButton>;
+            return (
+              <CustomButton
+                key={user.id}
+                user={user}
+                handleClick={this.handleClick}
+              ></CustomButton>
+            );
           })}
         </div>
       );
