@@ -65,13 +65,13 @@ th {
 }
 
 .container {
+  height: auto;
   background-color: white;
   border-radius: 3px;
   flex: 1 0;
-  height: calc(100vh - 140px);
   display: grid;
   margin: 1rem;
-  grid-template-rows: minmax(3rem, max-content) minmax(3rem, max-content) 1fr;
+  grid-template-rows: auto  auto 1fr;
   grid-template-columns: minmax(0, 1fr);
   /* min-height: 0;
   min-width: 0;    */
@@ -84,10 +84,12 @@ th {
 }
 
 .filter {
-  border-top: 1px solid rgba(169, 169, 169, 0.384);
-  border-bottom: 1px solid rgba(169, 169, 169, 0.384);
+  /* border-top: 1px solid rgba(169, 169, 169, 0.384);
+  border-bottom: 1px solid rgba(169, 169, 169, 0.384); */
   grid-column: 1;
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
 }
 .tableContainer {
   /* border-top: 1px solid rgba(169, 169, 169, 0.384); */
@@ -101,9 +103,57 @@ th {
 
 .inner {
   overflow: auto;
-  height: calc(100vh - 250px);
+  /* height: calc(100vh - 250px); */
   /* background-color: rgba(30, 143, 255, 0.26); */
   margin: 0px, 1rem;
   border-top: 1px solid rgba(169, 169, 169, 0.384);
   border-bottom: 1px solid rgba(169, 169, 169, 0.384);
+}
+
+.toolbar {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.tbutton{
+  
+  max-width: 200px; 
+  margin: 5px;
+  padding: 5px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+}
+
+.t1 {flex-basis: 150px; }
+.t2 {flex-basis: 150px; }
+
+.toolbar-grid {
+  border-top: 1px solid rgba(169, 169, 169, 0.384);
+  display: grid;
+
+  column-gap: 5px;
+  row-gap: 5px;
+  padding: 5px;
+}
+
+.toolbar-grid{
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.toolbar-gridB{
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.gbutton{
+  padding: 5px;
+  min-width: 150px;
+}
+
+.vbutton{
+  padding: 5px;
+  min-width: 100px;
 }
