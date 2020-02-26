@@ -1,0 +1,13 @@
+.menu {
+  list-style: none;
+  margin: 0px;
+  
+  .menu-item {
+    display: inline;
+    margin: 0px 5px;
+  }
+  .selected {
+    border-bottom: 2px solid gray;
+  }
+}
+

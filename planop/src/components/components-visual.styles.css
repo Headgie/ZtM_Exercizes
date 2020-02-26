@@ -1,0 +1,115 @@
+button:focus {
+	outline: 0;
+}
+button:active {
+	outline: none;
+}
+
+h3 {
+	margin-left: 24px;
+}
+
+h2 {
+	margin-inline-start: 20px;
+	margin-inline-end: 20px;
+}
+
+/* Footer styles */
+footer {
+	color: rgb(97, 96, 96);
+	background-color: #c3c3c5;
+}
+/* Header styles */
+.MuiAppBar-colorPrimary {
+	color: #fff;
+	background-color: #3f51b5;
+}
+.MuiAppBar-colorSecondary {
+	color: rgba(0, 0, 0, 0.87);
+	background-color: #f5f5f5;
+}
+
+/* paper */
+
+.MuiPaper-rounded {
+	border-radius: 4px;
+}
+
+.MuiPaper-root {
+	color: rgba(0, 0, 0, 0.87);
+	transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	background-color: #fff;
+	margin: 20px;
+	padding: 5px 0px;
+}
+
+.MuiPaper-elevation3 {
+	box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+		0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+}
+
+.MuiPaper-elevation4 {
+	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+		0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.border-top {
+	border-top: 1px solid #e0e0e0;
+	/* height: 5px; */
+}
+.border-bottom {
+	border-bottom: 1px solid #e0e0e0;
+	/* height: 5px; */
+}
+
+.list {
+	list-style: none;
+}
+
+.listItem {
+	padding: 16px 6px;
+	margin-top: 20px;
+}
+.listItem:hover {
+	padding: 16px 6px;
+	margin-top: 20px;
+	background-color: #f1f1f182;
+}
+
+/* buttons */
+.navToggleButton {
+	height: 2em;
+	background-color: #f5f5f5;
+	border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.navToggleButton:hover {
+	background-color: rgba(224, 224, 224, 0.377);
+}
+
+.filterToggleButton {
+	height: 2em;
+	background-color: #f5f5f5;
+	border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.filterToggleButton:hover {
+	background-color: rgba(194, 194, 194, 0.342);
+}
+
+.toolbarButton {
+	height: 2em;
+	background-color: #f5f5f5;
+	border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.toolbarButton:hover {
+	background-color: rgba(194, 194, 194, 0.342);
+}
+
+.selectedToolbarButton, .selectedToolbarButton:hover {
+	/* background-color: #b1b1b1; */
+	background-color: rgba(0, 139, 220, 0.315);
+
+}
+

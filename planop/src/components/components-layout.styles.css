@@ -1,0 +1,124 @@
+header {
+  flex: 0 0 auto;
+ padding: 0px 1rem;
+ width: 100%;
+ display: flex;
+ z-index: 1100;
+ box-sizing: border-box;
+ flex-shrink: 0;
+ flex-direction: column;
+ flex-direction: row;
+ align-items: center;
+}
+
+footer {
+ flex: 0 0 auto;
+ overflow: hidden;
+ 
+ padding: 0px 1em;
+ height: 2em;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-end;
+}
+
+.nav-bar {
+ background-color: #fff;
+ border-right: 1px solid rgba(224, 224, 224, 1);
+ overflow: hidden;
+ flex: 0 0 auto;
+}
+
+.nav-bar-visible {
+ width: 350px;
+}
+
+.nav-bar-hidden {
+ width: 0px;
+}
+
+.progress-bar {
+ position: absolute;
+ z-index: 100; 
+ width: calc(100vw - 40px);
+}
+
+.progress-bar-visible {
+ height: block;
+}
+
+.progress-bar-hidden {
+ display: none;
+ /* height: block; */
+}
+
+main {
+ flex: 1 0 auto;
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows:
+   minmax(min-content, max-content)
+   minmax(min-content, max-content)
+   1fr;
+ background-color: #f5f5f5;
+ width: calc(100vw - 40px);
+ padding: 5px;
+}
+
+.page-caption {
+ grid-column: 1;
+ grid-row: 1;
+ padding-right: 20px;
+
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.filter {
+ grid-column: 1;
+ grid-row: 2;
+}
+
+.filter-visible {
+ display: block;
+
+}
+
+.filter-hidden {
+ display: none;
+
+}
+
+.toolbar {
+ display: grid;
+ column-gap: 5px;
+ row-gap: 5px;
+ padding: 5px;
+}
+
+.toolbar150 {
+ grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.toolbar100 {
+ grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.tableContainer {
+ grid-column: 1;
+ grid-row: 3;
+ max-width: auto;
+ /* border: 1px solid rgb(145, 145, 145); */
+}
+
+.inner {
+ overflow: auto;
+ /* height: calc(100vh - 250px); */
+ /* background-color: rgba(30, 143, 255, 0.26); */
+ width: calc(100vw - 40px);
+ margin: 0px, 1rem;
+ border-top: 1px solid rgba(169, 169, 169, 0.384);
+ border-bottom: 1px solid rgba(169, 169, 169, 0.384);
+}
