@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox layout example 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+
+      /*Блок flex-container */
+      .flex-container {
+        display: flex;
+        overflow: hidden;
+      }
+      /* Модификатор vertical*/
+      .flex-container_vertical {
+        flex-direction: column;
+      }
+
+      /* Модификатор horizontal*/
+      .flex-container_horizontal {
+        flex-direction: row;
+      }
+
+      /* Элемент flex-item*/
+      .flex-container__flex-item {
+        overflow: hidden;
+        flex: 1;
+      }
+      /* Модификатор fixed*/
+      .flex-container__flex-item_fixed {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+      }
+      /* Модификатор scrollable*/
+      .flex-container__flex-item_scrollable {
+        overflow: auto;
+      }
+      /* Блок "Страница"*/
+      .page { margin: 25px; height: calc(100vh - 50px) } 
+      /* Элемент "Заголовок" */
+      .page__header{padding: 25px; background-color: rgb(216, 216, 216); }
+      /* Элемент "Содержимое страницы" */
+      .page__contents { border:1px solid  lightgray;}
+      /* Элемент "Футер" */
+      .page__footer { background-color: rgb(184, 184, 184);     }
+      /* Блок "Список карточек"*/
+      .cardlist { height: auto; width:100%; background-color: white;  }
+      /* Элемент "Карточка"*/
+      .cardlist__card { padding: 5px; }  .cardlist__card:hover {  background-color: rgb(218, 218, 218);  }
+    </style>
+  </head>
+  <body>
+    <!-- Корневой контейнер страницы. Расположение элементов - вертикальное -->
+    <div class="page flex-container flex-container_vertical ">
+      <!-- Элемент "Заголовок" - размер фиксирован по содержимому -->
+      <div class="page__header flex-container__flex-item flex-container__flex-item_fixed"><h1>Header</h1><br/><h3>Subcaption</h3></div>
+      <!-- Элемент "Содержимое страницы" - flex-элемент заполнящий все свободное пространство. 
+      Если вложенные элементы больше по размеру, то появляется прокрутка. -->
+      <div class="page__contents flex-container__flex-item flex-container__flex-item_scrollable" >
+        <!-- Блок "Список карточек". Включает в себя длинный список карточек, что приводит к появлению прокрутки у родительского элемента -->
+        <div class="cardlist">
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi omnis, modi ipsam aliquid assumenda magni numquam. Porro molestias, facilis atque delectus quam, eaque fugiat quo doloribus, consequatur vero pariatur?</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>                                                          
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>     
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>                                                          
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>          
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>     
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>                                                          
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>
+          <div class="cardlist__card">Card content</div>                            
+        </div>
+      </div>
+      <!-- Элемент "Футер" - размер фиксирован по содержимому -->
+      <div class="page__footer flex-container__flex-item flex-container__flex-item_fixed">footer</div>
+    </div>
+  </body>
+</html>

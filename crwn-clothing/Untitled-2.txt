@@ -1,0 +1,25 @@
+3 стерео jack  1/4" - РАЗЪЕМ SOUNDKING CJ3M005 888880021464
+2 male XLR - РАЗЪЕМ SOUNDKING CX3M003 888880021469
+20 метров симметричный микрофонный кабель какой есть
+3 комплекта струн для классики СТРУНЫ D'ADDARIO EJ47 888880002238
+
+
+https://onlinetrade.ru/basket_payments.php?order_id=14555303&mode=sb&order_key=02c71318c827f491028122ac67a6ed77
+
+
+что-то я не могу найти заявку про быстрый поиск
+в каком проекте она была?
+От Жанна мне:  (Частное) 08:52 PM
+давай 12го я точно уже смогу подключиться к своему рабочему столу и все найду, ок? сегодня никак...или могу на словах тебе рассказать
+проект Сборка должен был быть
+автор заявки - я
+может Костя что-то менял....
+
+learn javascript
+habr лента react
+адаптивная верстка
+dependecy injection
+
+
+<svg class="MuiSvgIcon-root jss1860" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"></path></svg>
+<svg class="MuiSvgIcon-root jss1860" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>flex-splitter</title>
+	<link rel="stylesheet" href="./splits.css">
+	<script src="./splits.js" defer></script>
+</head>
+
+<body>
+	<flex class="v" style="flex: 1 ; height: calc(100vh - 20px);">
+		<flex-item style="flex: 0 0 100px; background: pink;">
+		</flex-item>
+		<!-- <flex-item class="outer" style="flex: 1;">
+			<div class="big"> 
+				dsdsd Flex 1
+			</div>
+		</flex-item>
+		<flex-resizer></flex-resizer> -->
+		<flex class="h" style="flex: 1;">
+			<flex-item style="flex: 0 0 350px; background-color: aqua;">Flex 2</flex-item>
+			<!-- <flex-resizer></flex-resizer> -->
+			<flex class="v" style="flex: 2; ">
+				<flex-item style="flex: 1; background: rgb(44, 169, 201);">Flex 3</flex-item>
+				<flex-resizer></flex-resizer>
+				<!-- <flex class="h" style="flex: 1">
+          <flex-item class="outer" style="flex: 1; background: green;">
+            <div class="big"> 
+              dsdsd Flex 4
+            </div>
+          </flex-item>
+					<flex-resizer></flex-resizer>
+					<flex-item style="flex: 2;">Flex 5</flex-item>
+					<flex-item style="flex: 0 0 120px; background: darkorange;">Flex 6</flex-item>
+				</flex> -->
+				<flex-item style="flex: 1;">Flex 5</flex-item>
+			</flex>
+		</flex>
+		<flex-item style="flex: 0 0 32px; background: pink;">
+		</flex-item>
+	</flex>
+	
+</body>
+</html>

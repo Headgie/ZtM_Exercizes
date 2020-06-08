@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox layout example 1</title>
+    <link rel="stylesheet" href="./flex-layout.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+    </style>
+    <script src="./flex-layout.js" defer></script>
+  </head>
+  <body>
+  <div class="flex-container flex-container_vertical" 
+    style="height: 100vh;"
+    >
+    <div  class="flex-container__flex-item"  
+      style="flex: 1; background-color: rgb(154, 154, 211);"> item 1</div>
+    <div class="flex-container__flex-resizer"></div>
+    <div class="flex-container__flex-item flex-container flex-container_horizontal" 
+      style="flex: 1; background-color: rgb(154, 211, 176);">
+      <div  class="flex-container__flex-item" 
+        style="flex: 1; background-color: rgb(226, 177, 104);"> item 3</div>
+      <div class="flex-container__flex-resizer"></div>
+      <div  class="flex-container__flex-item"  
+      style="flex: 1; background-color: rgb(255, 254, 167);"> item 4</div>
+    </div>
+  </div>
+  </body>
+</html>
