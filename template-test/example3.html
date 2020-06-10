@@ -17,6 +17,7 @@
         --page__header_bg-color: rgb(173, 207, 235) ;
         --page__side-panel-header_bg-color: rgb(147, 194, 194) ;
         --page__modal_navigation-header_bg-color: rgb(194, 164, 147) ;
+        --page__modal_navigation_fade-in_background: #00000034;
         --page__contents-header_bg-color: rgb(185, 185, 206);
         --page__footer_bg-color: rgb(179, 179, 179) ;
         --toolbar-button_text-color: rgb(41, 41, 41);
@@ -39,6 +40,7 @@
         --page__header_bg-color: rgb(48, 46, 100);
         --page__side-panel-header_bg-color: rgb(11, 68, 71) ;
         --page__modal_navigation-header_bg-color: rgb(70, 44, 29) ;
+        --page__modal_navigation_fade-in_background: #ffffff3d;
         --page__contents-header_bg-color: rgb(36, 36, 83);     
         --page__footer_bg-color: rgb(65, 65, 65);
         --toolbar-button_text-color: rgb(209, 209, 209);   
@@ -49,6 +51,7 @@
         --flex-container-vertical__flex-resizer_background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='10'><path d='M0 2 h30 M0 5 h30 M0 8 h30' fill='none' stroke='white'/></svg>");
         --flex-container-horizontal__flex-resizer_background-image:  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='30'><path d='M2 0 v30 M5 0 v30 M8 0 v30' fill='none' stroke='white'/></svg>");        
         --flex-container-vertical__flex-resizer_bg-color: rgba(49, 49, 49, 0.767);
+        
       }
 
       /* Chrome scrollbars styling */
@@ -106,10 +109,12 @@
        opacity: 0; 
        width: 0px;
         transition: opacity .15s linear , width .01s ease .15s ; 
+        background-color: var(--page__modal_navigation_fade-in_background)
       }
       .page__modal_fade-in {
         opacity: 1;
         width: 100vw; 
+        
        }
 
   
@@ -119,11 +124,12 @@
        height: 100vh  ; top: 0px; left: 0px; 
        /* transition: left 255ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;    */
        transition: opacity 0.3s linear, left 0.3s ease-out;}
-      .page__modal_navigation_inner {  height: 100%;  width: 350px; /* padding: 5px;*/}
+      .page__modal_navigation_inner {  height: 100%;  width: 350px; background-color: var(--bg) ;/* padding: 5px;*/}
       .page__modal_navigation_fade {  left: -350px; /*opacity:1*/;
         /* transition:  opacity 0.3s linear, left 255ms cubic-bezier(0.4, 0, 0.6, 1) 0ms; */
         }
         .page__modal_navigation_fade-in { 
+          
           left: 0;/* opacity: 0*/;
         }
       .page__modal_navigation-header { padding:5px;background-color: var(--page__modal_navigation-header_bg-color); align-items: center; height: 38px;}
@@ -411,7 +417,12 @@ img {
       function toggleNavigation(e) {
         console.log(e);
         document.getElementsByClassName("page__modal_navigation")[0].classList.toggle("page__modal_navigation_fade-in");
-        document.getElementsByClassName("page__modal")[0].classList.toggle("page__modal_fade-in");
+        let pageModel = document.getElementsByClassName("page__modal")[0];
+        pageModel.classList.toggle("page__modal_fade-in");
+        //console.log(document.getElementsByClassName("page__modal")[0]);
+        // if (pageModel.classList.contains('page__modal_fade-in'))  
+        //   pageModel.style.display = "block"; 
+        // else pageModel.style.display = "none"; 
       }      
 
       let toggle = document.querySelector('.page__toggle-theme-button');
