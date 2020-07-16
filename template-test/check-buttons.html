@@ -22,7 +22,8 @@
       /* Элемент "Футер" */
       .page__footer { background-color: rgb(184, 184, 184);     }
 
-      .page__filter { background-color: rgb(242, 252, 255); 
+      .page__filter { 
+        /* background-color: rgb(242, 252, 255);  */
        /* grid-template-columns: repeat(auto-fill, minmax(max-content, 1fr));*/
 
   /*  display: grid;
@@ -37,14 +38,31 @@
 
       .filter__group {display: flex; flex-direction: row; align-items: baseline;}
       .filter__group-item { padding:5px; flex:1 ; 
-      /* min-width: 120px ; */
 
+         min-width: 115px; 
+      /* background-color: rgb(230, 246, 252);  */
+      text-align: end;
     }
       .filter__group-item-button { flex:1;
          padding: 5px; background-color: rgb(231, 231, 231); border: 1px solid lightgray;  
         font-size: 1em; margin:5px ; outline: 0px;
-        min-width: 80px ;
-      max-width: max-content;}
+        min-width: 100px ;
+      max-width: max-content;
+      }
+
+
+      @media (min-width: 1199px){
+        .filter__group-item {
+           /* background-color: rgb(252, 240, 230);  */
+           min-width: max-content; 
+      /* background-color: rgb(230, 246, 252);  */
+        text-align: start;
+        }
+      };
+
+   
+      
+
     </style>
   </head>
   <body>
@@ -55,22 +73,25 @@
       <div class="flex-container__flex-item flex-container__flex-item_fixed flex-container flex-container_horizontal">
         <div class=" flex-container__flex-item "></div>
         <div class="page__filter ">
-          <div class="filter__group">
-            <div  class="filter__group-item">group1</div>
-            <button class="filter__group-item-button">bt1</button>
-            <button class="filter__group-item-button">bt2</button>
-            <button class="filter__group-item-button">bt3</button>
-          </div>
+
           <div  class="filter__group">
             <div class="filter__group-item">group2 group</div>
-            <button class="filter__group-item-button">buton1</button>
-            <button class="filter__group-item-button">button2</button>
+            <button class="filter__group-item-button">Номер</button>
+            <button class="filter__group-item-button">Название</button>
           </div>
+
+          <div class="filter__group">
+            <div  class="filter__group-item">Тип СЛ</div>
+            <button class="filter__group-item-button">СЛИ</button>
+            <button class="filter__group-item-button">СЛИИ</button>
+            <button class="filter__group-item-button">ЭСЛ</button>
+          </div>
+
           <div  class="filter__group">
-            <div class="filter__group-item">grrrroup3</div>
-            <button class="filter__group-item-button">btn31</button>
-            <button class="filter__group-item-button">btn32</button>
-            <button class="filter__group-item-button">btn33</button>
+            <div class="filter__group-item">Комментарии</div>
+            <button class="filter__group-item-button">Листа</button>
+            <button class="filter__group-item-button">Оператора</button>
+            <button class="filter__group-item-button">Технолога</button>
           </div>
         </div>
         <div class="flex-container__flex-item"></div>
