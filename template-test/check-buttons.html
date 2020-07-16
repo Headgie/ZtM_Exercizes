@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="flex-layout.css">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+      /* Блок "Страница"*/
+      .page { margin: 15px; height: calc( 100vh - 30px) } 
+      /* Элемент "Заголовок" */
+      .page__header{padding: 25px; background-color: rgb(216, 216, 216); }
+      /* Элемент "Содержимое страницы" */
+      .page__contents { border:1px solid  lightgray;}
+      /* Элемент "Футер" */
+      .page__footer { background-color: rgb(184, 184, 184);     }
+
+      .page__filter { background-color: rgb(242, 252, 255); 
+       /* grid-template-columns: repeat(auto-fill, minmax(max-content, 1fr));*/
+
+  /*  display: grid;
+    column-gap: 5px;
+    row-gap: 5px;*/
+
+    display: flex; flex-direction: row; flex-wrap: wrap;
+    justify-items: center;
+    
+    padding: 5px;  
+    }
+
+      .filter__group {display: flex; flex-direction: row; align-items: baseline;}
+      .filter__group-item { padding:5px; flex:1 ; 
+      /* min-width: 120px ; */
+
+    }
+      .filter__group-item-button { flex:1;
+         padding: 5px; background-color: rgb(231, 231, 231); border: 1px solid lightgray;  
+        font-size: 1em; margin:5px ; outline: 0px;
+        min-width: 80px ;
+      max-width: max-content;}
+    </style>
+  </head>
+  <body>
+    <!-- Корневой контейнер страницы. Расположение элементов - вертикальное -->
+    <div class="page flex-container flex-container_vertical ">
+      <!-- Элемент "Заголовок" - размер фиксирован по содержимому -->
+      <div class="page__header flex-container__flex-item flex-container__flex-item_fixed"><h1>Header</h1></div>
+      <div class="flex-container__flex-item flex-container__flex-item_fixed flex-container flex-container_horizontal">
+        <div class=" flex-container__flex-item "></div>
+        <div class="page__filter ">
+          <div class="filter__group">
+            <div  class="filter__group-item">group1</div>
+            <button class="filter__group-item-button">bt1</button>
+            <button class="filter__group-item-button">bt2</button>
+            <button class="filter__group-item-button">bt3</button>
+          </div>
+          <div  class="filter__group">
+            <div class="filter__group-item">group2 group</div>
+            <button class="filter__group-item-button">buton1</button>
+            <button class="filter__group-item-button">button2</button>
+          </div>
+          <div  class="filter__group">
+            <div class="filter__group-item">grrrroup3</div>
+            <button class="filter__group-item-button">btn31</button>
+            <button class="filter__group-item-button">btn32</button>
+            <button class="filter__group-item-button">btn33</button>
+          </div>
+        </div>
+        <div class="flex-container__flex-item"></div>
+        </div>
+      <!-- Элемент "Содержимое страницы" - flex-элемент заполнящий все свободное пространство. 
+      Если вложенные элементы больше по размеру, то появляется прокрутка. -->
+      <div class="page__contents flex-container__flex-item" >
+      </div>
+        
+  
+
+
+  <!-- Элемент "Футер" - размер фиксирован по содержимому -->
+  <div class="page__footer flex-container__flex-item flex-container__flex-item_fixed">footer</div>
+</div>
+  </body>
+</html>
