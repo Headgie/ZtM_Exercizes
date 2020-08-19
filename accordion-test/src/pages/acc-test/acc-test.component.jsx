@@ -3,6 +3,7 @@ import { block } from "bem-cn";
 
 import Accordion from "../../components/accordion/accordion.component";
 import AccordionItem from "../../components/accordion/accordion-item.component";
+import DemoGrid from "../../components/demo-grid/demo-grid.component";
 
 import "./acc-test.styles.scss";
 
@@ -28,6 +29,11 @@ class AccTestPage extends Component {
 			filterStage:index});
 	}
 
+  handlerAccordionClose = () => {
+    console.log("handlerAccordionClose");
+    this.setState({filterClosed: !this.state.filterClosed});
+  }
+
 	render(){
 
 		const fc = block('flex-container');
@@ -37,34 +43,37 @@ class AccTestPage extends Component {
 
 		return(
       <div className={fc("flex-item").mix(fc({vertical: true}))}>
-      <div className={fc("flex-item",{fixed: true}).mix(at("header"))} >
-      222
-      </div>
-      <div className={fc("flex-item",{fixed: true}).mix(fc({vertical:true}))}
-      >
+        <div className={fc("flex-item",{fixed: true}).mix(at("header"))} >
+        222
+        </div>
 
-      <Accordion collapsed={this.state.filterClosed}>
-      <AccordionItem index={0} currentItem={this.state.filterStage}
-    accordionCollapsed={this.state.filterClosed} handlerClick={this.clickAccordionHandler.bind(this)}>
-        <div>header</div>
-        <div></div>
-      </AccordionItem>
-      <AccordionItem index={1} currentItem={this.state.filterStage}
-    accordionCollapsed={this.state.filterClosed} handlerClick={this.clickAccordionHandler.bind(this)}>
-        <div>header</div>
-        <div></div>
-      </AccordionItem>
-      <AccordionItem index={2} currentItem={this.state.filterStage}
-    accordionCollapsed={this.state.filterClosed} handlerClick={this.clickAccordionHandler.bind(this)}>
-        <div>header</div>
-        <div></div>
-      </AccordionItem>      
-      </Accordion>
-      </div>
-      <div className={fc("flex-item").mix(at("section"))} >
-      units list
+
+        <Accordion collapsed={this.state.filterClosed} handlerAccordionClose={this.handlerAccordionClose.bind(this)}>
     
-      </div>
+        <AccordionItem index={0} currentItem={this.state.filterStage}
+      accordionCollapsed={this.state.filterClosed} handlerClick={this.clickAccordionHandler.bind(this)}>
+          <div>header</div>
+          <div>
+            <DemoGrid header="dsfsdf" footer="jdsgfhsgfg"></DemoGrid>
+          </div>
+        </AccordionItem>
+        <AccordionItem index={1} currentItem={this.state.filterStage}
+      accordionCollapsed={this.state.filterClosed} handlerClick={this.clickAccordionHandler.bind(this)}>
+          <div>header</div>
+          <div>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/>fgdfgdfg<br/></div>
+        </AccordionItem>
+        <AccordionItem index={2} currentItem={this.state.filterStage}
+      accordionCollapsed={this.state.filterClosed} handlerClick={this.clickAccordionHandler.bind(this)}>
+          <div>header</div>
+          <div>xcxcxc</div>
+        </AccordionItem>      
+
+        </Accordion>
+     
+        <div className={fc("flex-item").mix(at("section"))} >
+        units list
+      
+        </div>
       </div>
       )
     }

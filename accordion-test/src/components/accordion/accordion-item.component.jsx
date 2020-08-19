@@ -7,8 +7,8 @@ const AccordionItem = ({children, index, currentItem, accordionCollapsed, handle
 	const fc = block('flex-container');
 	const ac = block('accordion')
 	return(
-		<div className={fc("flex-item",{fixed: currentItem!==index}).mix(fc({vertical: true}),ac("card"))}> 				
-			<div className={fc("flex-item",{fixed: true}).mix(ac("card-header", {collapsed:currentItem!==index || accordionCollapsed }))}
+		<Fragment> 				
+			<div className={fc("flex-item",{fixed: true}).mix(ac("card-header"))}
 			onClick={()=> handlerClick(index)}
 			> 
 			 {children[0]}
@@ -16,7 +16,7 @@ const AccordionItem = ({children, index, currentItem, accordionCollapsed, handle
 			<div className={fc("flex-item").mix(fc({vertical: true}), ac("card-content", {collapsed:currentItem!==index || accordionCollapsed }))}> 
 				{children[1]}
 			</div>
-		</div>
+		</Fragment>
 	)
 }
 

@@ -3,12 +3,32 @@ import { block } from "bem-cn";
 
 import "./accordion.styles.scss"
 
-const Accordion = ({children, collapsed}) => {
+const Accordion = ({children, collapsed,handlerAccordionClose }) => {
 	const ac = block('accordion');
 	const fc = block('flex-container');
 	return(
-		<div className={fc("flex-item",{fixed: true}).mix(fc({vertical:true}), ac( {collapsed: collapsed}))}>
-			{children} 
+		
+	
+		<div className={ac}>
+			{/*	onClick={handlerAccordionClose}>
+		
+				<div className={fc("flex-item",{fixed: true}).mix(ac("card-header"))}>
+				ghjkdhgkdhg
+				</div>
+				<div className={fc("flex-item").mix(ac("card-content", {collapsed:collapsed}))}>
+				etrtertert
+				</div>
+
+				<div className={fc("flex-item",{fixed: true}).mix(ac("card-header"))}>
+				ghjkdhgkdhg
+				</div>			
+				<div className={fc("flex-item",{fixed: true}).mix(ac("card-header"))}>
+				ghjkdhgkdhg
+			</div>
+		*/}
+			
+	
+				{children}
 		</div>)
 }
 

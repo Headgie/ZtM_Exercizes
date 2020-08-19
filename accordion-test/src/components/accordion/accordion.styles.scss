@@ -1,69 +1,60 @@
-$animation-time: 0.35s;
+$animation-time: 0.5s;
 .accordion {
-	background-color: white;
-	max-height: 40vh;
-	min-height: 40vh;
-	justify-content: flex-start;
-	align-content: flex-start;
-	transition: all $animation-time ease;
-	border: 1px solid rgba(0, 0, 0, 0.329);
+  background-color: white;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  transition: flex-grow $animation-time ease;
+  border: 1px solid rgba(0, 0, 0, 0.329);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .accordion_collapsed {
-	// background-color: rgb(230, 230, 230);
-	max-height: min-content;
-	min-height: 0px;
-	transition: flex-grow, flex-shrink, max-height, min-height $animation-time ease;
+  min-height: min-content;
+  flex: 0;
 }
 
 .accordion__card {
-	transition: all $animation-time ease;
-	justify-content: flex-start;
-	align-content: flex-start;
+  background-color: lightblue;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
-
 .accordion__card-header {
-	background-color: rgba(0, 0, 0, 0.116);
-	border-bottom: 1px solid rgba(0,0,0,.125);
-	// margin-bottom: -1px;
-	// min-height: 1.5rem;
-	// padding: 12px 20px;
-	padding: 6px;
+  background-color: rgba(0, 0, 0, 0.116);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 6px;
 }
 
 .accordion__card-header:hover {
-	background-color: rgba(0, 0, 0, 0.192);
+  background-color: rgba(0, 0, 0, 0.192);
 }
-.accordion__card:last-child> .accordion__card-header_collapsed{
-	// background-color: yellow;
-	margin-bottom: -1px;
+.accordion__card:last-child > .accordion__card-header_collapsed {
+  // background-color: yellow;
+  margin-bottom: -1px;
 }
 .accordion__card-content {
-	// padding: 12px 20px;
-	//  background-color: rgb(167, 236, 153);
-	flex-grow: 1;
-	//  flex-shrink: 0.0001;
-	// max-height: auto;
-		min-height: auto;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.253);
-		// margin-bottom: -1px;
-}
-
-.accordion__card:last-child>.accordion__card-content{
-// background-color: yellow;
-	border-bottom: 0px;
+  flex: 1;
+  max-height: 30vh;
+  min-height: 30vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+	transition: min-height $animation-time ease;
+	overflow:hidden;
+	
 }
 .accordion__card-content_collapsed {
-	 flex-grow: 0;
-	//  flex-shrink: 1;
-	max-height: 0.00001rem;
-	min-height: 0.00001rem;
-	// padding: 0px;
-	transition: all $animation-time ease;
-	border-bottom: 0px;
+  flex: 0;
+  max-height: 0px;
+  min-height: 0px;
+  border-bottom: 0px;
+}
+.accordion__card:last-child > .accordion__card-content {
+  // background-color: yellow;
+  border-bottom: 0px;
 }
 
-.accordion__content-container{
-	padding: 12px 20px;
-	overflow:hidden;
+.accordion__content-container {
+  padding: 12px 20px;
+  overflow: hidden;
 }
