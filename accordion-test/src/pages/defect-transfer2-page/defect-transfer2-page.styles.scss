@@ -1,0 +1,140 @@
+
+:root {
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #28a745;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #6c757d;
+	--gray-dark: #343a40;
+	--primary: #007bff;
+	--secondary: #6c757d;
+	--success: #28a745;
+	--info: #17a2b8;
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--light: #f8f9fa;
+	--dark: #343a40;
+	--breakpoint-xs: 0;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+	--font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+$animation-time: 1s;
+$animation-time-fast: 0.5s;
+
+html {
+	font-family: --font-family-sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	// font-size: 16px;
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+
+.defects-transfer-page {
+	margin: 2px;
+	background-color: var(--white);
+	padding: 5px;
+}
+
+.defects-transfer-page__header {
+	// background-color: rgba(135, 206, 250, 0.158);
+	margin: 0.2rem;
+}
+
+.defects-transfer-page__filter-group-header {
+	padding: 12px 20px;
+}
+
+.defects-transfer-page__filter-group-content {
+	padding: 12px 20px;
+}
+.defects-transfer-page__units {
+	background-color: rgba(255, 160, 122, 0.158);
+	transition: all $animation-time linear;
+	// margin: 2px;
+}
+
+
+
+
+.accordion2 {
+	background-color: lightpink;
+	max-height: 400px;
+	min-height: 400px;
+	justify-content: flex-start;
+	align-content: flex-start;
+	transition: all $animation-time ease;
+}
+.accordion2_collapsed {
+	background-color: lightpink;
+	max-height: min-content;
+	min-height: 0px;
+	transition: all $animation-time ease;
+}
+
+.accordion2__card {
+	transition: all $animation-time ease;
+	justify-content: flex-start;
+	align-content: flex-start;
+}
+.accordion2__card-header {
+	background-color: rgba(0,0,0,.03);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+	margin-bottom: -1px;
+	// min-height: 1.5rem;
+	padding: 12px 20px;
+}
+
+.accordion2__card-content {
+	// padding: 12px 20px;
+	 background-color: rgb(167, 236, 153);
+	flex-grow: 1;
+	//  flex-shrink: 0.0001;
+	// max-height: auto;
+		min-height: auto;
+}
+
+.accordion2__card-content_collapsed {
+	 flex-grow: 0.0001;
+	//  flex-shrink: 1;
+	max-height: 0.00001rem;
+	min-height: 0.00001rem;
+	// padding: 0px;
+	transition: flex-grow $animation-time ease;
+}
+
+.accordion2__content-container{
+	padding: 12px 20px;
+	overflow:hidden;
+}
+
+.inner-grid{
+	padding: 5px;
+}
+.inner-grid__footer{
+	background-color: lightskyblue;
+}
+.inner-grid__data{
+	background-color: lightsteelblue;
+}
+.inner-grid__header{
+	background-color: mediumaquamarine;
+}
