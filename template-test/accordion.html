@@ -1,0 +1,169 @@
+<html>
+  <head>
+		<meta charset="UTF-8">
+		<title>Accordion Test</title>
+		<style type="text/css">
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: "Helvetica", sans-serif;
+			}
+			.nav {
+				position: fixed;
+				top: 0px;
+				width: 100%;
+				height: 40px;
+				background: rgba(0, 128, 0, .25);
+			}
+			.container {
+				width: 1024px;
+				display: table;
+				margin: 0 auto;
+			}
+			.nav .container {
+				display: block;
+				height: 40px;
+			}
+			body > .container {
+				height: 100%;
+				padding-top: 40px;
+			}
+			.sidebar {
+				display: table-cell;
+				width: 368px;
+				position: fixed;
+				top: 40px;
+				bottom: 0px;
+			}
+			.content {
+				margin-left: 368px;
+				background: rgba(0, 0, 128, .125);
+				min-height: 100%;
+				height: 100%;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+			}
+			.section {
+				height: 48px;
+				overflow: hidden;
+				position: relative;
+			}
+			.section.expanded {
+				height: 15px;
+				height: auto;
+				-webkit-flex: 1 1 auto;
+				-moz-flex: 1 1 auto;
+				-ms-flex: 1 1 auto;
+				flex: 1 1 auto;
+			}
+			.content .header {
+				height: 48px;
+				background: rgba(0, 128, 128, .85);
+				color: white;
+				font-size: 32px;
+				line-height: 48px;
+				font-weight: bold;
+				width: 100%;
+			}
+			.questions {
+				overflow-y: scroll;
+				position: absolute;
+				top: 48px;
+				bottom: 0px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="container">
+				Navigation
+			</div>
+		</div>
+		<div class="container">
+			<div class="sidebar">
+				Sidebar
+			</div>
+			<div class="content">
+				<div class="section">
+					<div class="header">
+						Header 1
+					</div>
+					<div class="questions">
+						<p>It wasn’t until widely respected economists Carmen Reinhart and Kenneth Rogoff shared the Excel files behind their influential paper on the relationship between government debt and economic growth, that a very basic and consequential spreadsheet error was discovered.</p>
+						<p>Suddenly, a conclusion that policy makers around the world had seized on for years to justify steep spending cuts was thrown in doubt.</p>
+						<p>That’s why Richard Price, the CEO of a social network for researchers called Academia.edu, says that sharing raw research data should be expected from the start. His platform is adding a feature today that lets researchers post the data behind their work through embeddable data-sets and code on their profile pages.</p>
+						<p>“They literally drew the wrong rectangle and dropped off the last few rows of data. It wasn’t a hardcore programming error,” he said.</p>
+						<p>Price asserts that the Reinhart-Rogoff controversy along with another recent scandal involving a Dutch social scientist who faked data for 10 years is damaging public trust in scientific research.</p>
+						<p>Price said the Dutch scientist Diederik Stapel justified his fraudulent data by saying he felt pressure to make conclusions simpler for the journals.  ”He said, ‘They want elegant results and elegant data with beautiful conclusions. But the data behind an experiment can be so messy.’”</p>
+						<p>Because of incidents like the Stapel fraud, Price believes that a pushback against traditional, less transparent and more expensive publishing models is gaining steam. Other competitors like ResearchGate and ScienceExchange are jumping on the bandwagon too.</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="header">
+						Header 2
+					</div>
+					<div class="questions">
+						<p>It wasn’t until widely respected economists Carmen Reinhart and Kenneth Rogoff shared the Excel files behind their influential paper on the relationship between government debt and economic growth, that a very basic and consequential spreadsheet error was discovered.</p>
+						<p>Suddenly, a conclusion that policy makers around the world had seized on for years to justify steep spending cuts was thrown in doubt.</p>
+						<p>That’s why Richard Price, the CEO of a social network for researchers called Academia.edu, says that sharing raw research data should be expected from the start. His platform is adding a feature today that lets researchers post the data behind their work through embeddable data-sets and code on their profile pages.</p>
+						<p>“They literally drew the wrong rectangle and dropped off the last few rows of data. It wasn’t a hardcore programming error,” he said.</p>
+						<p>Price asserts that the Reinhart-Rogoff controversy along with another recent scandal involving a Dutch social scientist who faked data for 10 years is damaging public trust in scientific research.</p>
+						<p>Price said the Dutch scientist Diederik Stapel justified his fraudulent data by saying he felt pressure to make conclusions simpler for the journals.  ”He said, ‘They want elegant results and elegant data with beautiful conclusions. But the data behind an experiment can be so messy.’”</p>
+						<p>Because of incidents like the Stapel fraud, Price believes that a pushback against traditional, less transparent and more expensive publishing models is gaining steam. Other competitors like ResearchGate and ScienceExchange are jumping on the bandwagon too.</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="header">
+						Header 3
+					</div>
+					<div class="questions">
+						<p>It wasn’t until widely respected economists Carmen Reinhart and Kenneth Rogoff shared the Excel files behind their influential paper on the relationship between government debt and economic growth, that a very basic and consequential spreadsheet error was discovered.</p>
+						<p>Suddenly, a conclusion that policy makers around the world had seized on for years to justify steep spending cuts was thrown in doubt.</p>
+						<p>That’s why Richard Price, the CEO of a social network for researchers called Academia.edu, says that sharing raw research data should be expected from the start. His platform is adding a feature today that lets researchers post the data behind their work through embeddable data-sets and code on their profile pages.</p>
+						<p>“They literally drew the wrong rectangle and dropped off the last few rows of data. It wasn’t a hardcore programming error,” he said.</p>
+						<p>Price asserts that the Reinhart-Rogoff controversy along with another recent scandal involving a Dutch social scientist who faked data for 10 years is damaging public trust in scientific research.</p>
+						<p>Price said the Dutch scientist Diederik Stapel justified his fraudulent data by saying he felt pressure to make conclusions simpler for the journals.  ”He said, ‘They want elegant results and elegant data with beautiful conclusions. But the data behind an experiment can be so messy.’”</p>
+						<p>Because of incidents like the Stapel fraud, Price believes that a pushback against traditional, less transparent and more expensive publishing models is gaining steam. Other competitors like ResearchGate and ScienceExchange are jumping on the bandwagon too.</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="header">
+						Header 4
+					</div>
+					<div class="questions">
+						<p>It wasn’t until widely respected economists Carmen Reinhart and Kenneth Rogoff shared the Excel files behind their influential paper on the relationship between government debt and economic growth, that a very basic and consequential spreadsheet error was discovered.</p>
+						<p>Suddenly, a conclusion that policy makers around the world had seized on for years to justify steep spending cuts was thrown in doubt.</p>
+						<p>That’s why Richard Price, the CEO of a social network for researchers called Academia.edu, says that sharing raw research data should be expected from the start. His platform is adding a feature today that lets researchers post the data behind their work through embeddable data-sets and code on their profile pages.</p>
+						<p>“They literally drew the wrong rectangle and dropped off the last few rows of data. It wasn’t a hardcore programming error,” he said.</p>
+						<p>Price asserts that the Reinhart-Rogoff controversy along with another recent scandal involving a Dutch social scientist who faked data for 10 years is damaging public trust in scientific research.</p>
+						<p>Price said the Dutch scientist Diederik Stapel justified his fraudulent data by saying he felt pressure to make conclusions simpler for the journals.  ”He said, ‘They want elegant results and elegant data with beautiful conclusions. But the data behind an experiment can be so messy.’”</p>
+						<p>Because of incidents like the Stapel fraud, Price believes that a pushback against traditional, less transparent and more expensive publishing models is gaining steam. Other competitors like ResearchGate and ScienceExchange are jumping on the bandwagon too.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="indicator">
+		</div>
+	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://raw.github.com/flesler/jquery.scrollTo/master/jquery.scrollTo.min.js"></script>
+	<script>
+		
+		$(".section").children(".questions").toggle().end().first().addClass("expanded").children(".questions").toggle();
+		
+		$(document).ready(function(){
+			$(document).on("click", ".header", function (event) {
+				var parent = $(event.target).parent();
+				parent.children(".questions").toggle();
+				parent.toggleClass("expanded");
+			});
+		});
+		
+	</script>	
+</html>

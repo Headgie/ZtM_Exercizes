@@ -55,6 +55,29 @@
       .cardlist { height: auto; width:100%; background-color: white;  }
       /* Элемент "Карточка"*/
       .cardlist__card { padding: 5px; }  .cardlist__card:hover {  background-color: rgb(218, 218, 218);  }
+
+      .toolbar150 {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+
+    .toolbar {
+        display: grid;
+        grid-column-gap: 5px;
+        column-gap: 5px;
+        grid-row-gap: 5px;
+        row-gap: 5px;
+        padding: 5px;
+    }
+    .toolbarButton {
+	height: 2em;
+	background-color: #f5f5f5;
+	border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.toolbarButton:hover {
+	background-color: rgba(194, 194, 194, 0.342);
+}
     </style>
   </head>
   <body>
@@ -64,45 +87,72 @@
       <div class="page__header flex-container__flex-item flex-container__flex-item_fixed"><h1>Header</h1><br/><h3>Subcaption</h3></div>
       <!-- Элемент "Содержимое страницы" - flex-элемент заполнящий все свободное пространство. 
       Если вложенные элементы больше по размеру, то появляется прокрутка. -->
-      <div class="page__contents flex-container__flex-item flex-container__flex-item_scrollable" >
-        <!-- Блок "Список карточек". Включает в себя длинный список карточек, что приводит к появлению прокрутки у родительского элемента -->
-        <div class="cardlist">
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi omnis, modi ipsam aliquid assumenda magni numquam. Porro molestias, facilis atque delectus quam, eaque fugiat quo doloribus, consequatur vero pariatur?</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>                                                          
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>     
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>                                                          
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>          
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>     
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>                                                          
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>
-          <div class="cardlist__card">Card content</div>                            
+      <div class="page__contents flex-container__flex-item flex-container flex-container_horizontal" >
+        <div  class="flex-container__flex-item flex-container__flex-item_fixed" 
+        style="width: 30px; background-color: aquamarine;"></div>
+        <div class="page__contents flex-container__flex-item flex-container__flex-item_scrollable" 
+          style="flex:3;  max-width: 500px; /*min-width: 400px;*/">
+          <!-- Блок "Список карточек". Включает в себя длинный список карточек, что приводит к появлению прокрутки у родительского элемента -->
+          <div class="toolbar toolbar150">
+            <button class="toolbarButton"> Lorem ipsum</button>
+            <button class="toolbarButton"> dolor sit amet consectetur</button>
+            <button class="toolbarButton"> adipisicing elit.</button>
+            <button class="toolbarButton"> Consequatur labore</button>
+            <button class="toolbarButton"> et nostrum amet recusandae</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+            <button class="toolbarButton"> sdhfgsdhgf</button>
+
+          </div>
+          <div class="cardlist">
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi omnis, modi ipsam aliquid assumenda magni numquam. Porro molestias, facilis atque delectus quam, eaque fugiat quo doloribus, consequatur vero pariatur?</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>                                                          
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>     
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>                                                          
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>          
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>     
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>                                                          
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>
+            <div class="cardlist__card">Card content</div>                            
+          </div>
+          
         </div>
+        <div  class="flex-container__flex-item " 
+        style="flex: 1 1 auto ; background-color: aquamarine;"></div>
       </div>
       <!-- Элемент "Футер" - размер фиксирован по содержимому -->
       <div class="page__footer flex-container__flex-item flex-container__flex-item_fixed">footer</div>
