@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./styles/flex-layout.scss";
+import "./styles/flex-toolbar.scss";
+import "./styles/composed-list.scss";
+import "./App.scss";
+
+import { Route, Switch } from "react-router-dom";
+import { block } from "bem-cn";
+
+import DefectTransferPage from "./pages/defect-transfer-page/defect-transfer-page.component";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const fc = block('flex-container');
+  const app = block('app');
+	return (
+		<div className={fc({vertical:true}).mix(app)}>
+			<Switch>
+				<Route exact path="/" component={DefectTransferPage} />
+			</Switch>
+		</div>
+	);
 }
 
 export default App;
